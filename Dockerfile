@@ -18,12 +18,12 @@ ENV PACKER_VERSION=1.7.7
 #    ansible \
 #  && pip install virtualenv docker-compose awscli
 
-RUN apk --no-cache update \
-&& apk --no-cache add ca-certificates python py-pip py-setuptools groff less \
-&& apk --no-cache add --virtual build-dependencies curl \
-&& pip --no-cache-dir install awscli \
-&& curl -LO --silent --show-error https://github.com/kubernetes/kops/releases/download/${KOPS_VERSION}/kops-linux-amd64 \
-&& mv kops-linux-amd64 /usr/local/bin/kops \
+#RUN apk --no-cache update \
+#&& apk --no-cache add ca-certificates python py-pip py-setuptools groff less \
+#&& apk --no-cache add --virtual build-dependencies curl \
+#&& pip --no-cache-dir install awscli \
+#&& curl -LO --silent --show-error https://github.com/kubernetes/kops/releases/download/${KOPS_VERSION}/kops-linux-amd64 \
+RUN mv kops-linux-amd64 /usr/local/bin/kops \
 && curl -LO https://storage.googleapis.com/kubernetes-release/release/${KUBECTL_VERSION}/bin/linux/amd64/kubectl \
 && mv kubectl /usr/local/bin/kubectl \
 && curl -LO https://releases.hashicorp.com/terraform/${TERRAFORM_VERSION}/terraform_${TERRAFORM_VERSION}_linux_amd64.zip \
