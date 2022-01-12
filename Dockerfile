@@ -20,7 +20,7 @@ RUN apt-get update \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* *.zip
 
-
+CMD    ["/bin/bash"]
 
 # Make sure the package repository is up to date.
 RUN apt-get update && \
