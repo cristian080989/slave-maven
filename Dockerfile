@@ -20,7 +20,7 @@ RUN apt-get update \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* *.zip
 
-CMD    ["/bin/bash"]
+#CMD    ["/bin/bash"]
 
 # Make sure the package repository is up to date.
 RUN apt-get update && \
@@ -52,4 +52,5 @@ RUN chown -R jenkins:jenkins /home/jenkins/.m2/ && \
 # Standard SSH port
 EXPOSE 22
 
-CMD ["/usr/sbin/sshd", "-D"]
+CMD    ["/bin/bash", "-C"]
+#CMD ["/usr/sbin/sshd", "-D"]
