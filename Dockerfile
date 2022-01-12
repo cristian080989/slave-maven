@@ -10,13 +10,13 @@ ENV TERRAFORM_VERSION=0.13
 ENV TERRAGRUNT_VERSION=0.35.18
 ENV HELM_VERSION=v3.7.2
 ENV PACKER_VERSION=1.7.7
-RUN apk add --update \
-    python \
-    python-dev \
-    py-pip \
-    build-base \
-    ansible \
-  && pip install virtualenv docker-compose awscli
+#RUN apk add --update \
+#    python \
+#   python-dev \
+#    py-pip \
+#    build-base \
+#    ansible \
+#  && pip install virtualenv docker-compose awscli
 
 RUN apk --no-cache update \
 && apk --no-cache add ca-certificates python py-pip py-setuptools groff less \
