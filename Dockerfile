@@ -33,4 +33,5 @@ RUN chown -R jenkins:jenkins /home/jenkins/.m2/ && \
 EXPOSE 22
 
 #CMD    ["/bin/bash", "-C"]
+ENTRYPOINT ["./entrypoint.sh"] 
 CMD ["/usr/sbin/sshd", "-D"]
