@@ -10,13 +10,13 @@ ENV TERRAFORM_VERSION=0.13
 ENV TERRAGRUNT_VERSION=0.35.18
 ENV HELM_VERSION=v3.7.2
 ENV PACKER_VERSION=1.7.7
-ENV AWSCLI_VERSION="2.4.5"
+#ENV AWSCLI_VERSION="2.4.5"
 RUN apt-get update \
-    && apt-get install -y ansible curl python3 python3-pip python3-boto unzip  \
-    && pip3 install --upgrade awscli==${AWSCLI_VERSION} \
+    #&& apt-get install -y ansible curl python3 python3-pip python3-boto unzip  \
+    #&& pip3 install --upgrade awscli==${AWSCLI_VERSION} \
     && curl -LO https://releases.hashicorp.com/terraform/${TERRAFORM_VERSION}/terraform_${TERRAFORM_VERSION}_linux_amd64.zip \
-    && curl -LO https://releases.hashicorp.com/packer/${PACKER_VERSION}/packer_${PACKER_VERSION}_linux_amd64.zip \
-    && unzip '*.zip' -d /usr/local/bin \
+    #&& curl -LO https://releases.hashicorp.com/packer/${PACKER_VERSION}/packer_${PACKER_VERSION}_linux_amd64.zip \
+    #&& unzip '*.zip' -d /usr/local/bin \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* *.zip
 
