@@ -9,3 +9,7 @@ sudo apt-get update && sudo apt-get install terraform
 sudo yum -y update     
 sudo yum -y install aws-cli 
 aws --version   
+
+export AWS_ACCESS_KEY_ID=AKIAXUPZYJA2CGTKMG7B
+export AWS_SECRET_ACCESS_KEY=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
+export AWS_DEFAULT_REGION=us-east-1
